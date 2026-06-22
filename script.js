@@ -57,6 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const acceptCookies = document.getElementById('acceptCookies');
   const declineCookies = document.getElementById('declineCookies');
 
+  // Helper: hide banner robustly regardless of CSS cache state
+  function hideCookieBanner() {
+    // 1. Immediately block interaction
+    cookieBanner.style.pointerEvents = 'none';
+    // 2. Animate out via CSS transition
+    cookieBanner.classList.remove('show');
+    // 3. Force opacity and slide via inline style (overrides any cached CSS)
+    cookieBanner.style.opacity = '0';
+    cookieBanner.style.transform = 'translateX(-50%) translateY(200%)';
+    // 4. After animation, fully remove from layout
+    setTimeout(() => {
+      cookieBanner.style.display = 'none';
+    }, 650);
+  }
+
   if (cookieBanner && acceptCookies && declineCookies) {
     // Check if user already consented
     const cookieConsent = localStorage.getItem('cookie_consent_ma');
@@ -64,17 +79,25 @@ document.addEventListener('DOMContentLoaded', () => {
       // Small delay to make it feel smooth on load
       setTimeout(() => {
         cookieBanner.classList.add('show');
+        // Ensure inline styles don't block display
+        cookieBanner.style.display = '';
+        cookieBanner.style.opacity = '';
+        cookieBanner.style.transform = '';
+        cookieBanner.style.pointerEvents = '';
       }, 1500);
+    } else {
+      // Already consented: keep hidden from the start
+      cookieBanner.style.display = 'none';
     }
 
     acceptCookies.addEventListener('click', () => {
       localStorage.setItem('cookie_consent_ma', 'accepted');
-      cookieBanner.classList.remove('show');
+      hideCookieBanner();
     });
 
     declineCookies.addEventListener('click', () => {
       localStorage.setItem('cookie_consent_ma', 'declined');
-      cookieBanner.classList.remove('show');
+      hideCookieBanner();
     });
   }
 
