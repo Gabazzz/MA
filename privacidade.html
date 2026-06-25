@@ -3,37 +3,334 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Política de Privacidade - MA Instituto Profissional. Saiba como coletamos, tratamos e protegemos seus dados em conformidade com a LGPD e políticas da Meta.">
-  <title>Política de Privacidade | MA Instituto Profissional</title>
+  <meta name="description" content="Política de Privacidade - MA Instituto Maurício Alves. Saiba como coletamos, tratamos e protegemos seus dados em conformidade com a LGPD e políticas da Meta.">
+  <title>Política de Privacidade | MA — Instituto Maurício Alves</title>
   
-  <!-- Preconnect for performance optimization -->
+  <!-- Preconnect and Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=1.0.2">
+  <style>
+    :root {
+      --color-bg-main: #06080F;
+      --color-bg-card: #0D111E;
+      --color-gold: #C9A96E;
+      --color-gold-muted: rgba(201, 169, 110, 0.2);
+      --color-text-light: #FFFFFF;
+      --color-text-gray: #D1D5DB;
+      --color-text-muted: #9CA3AF;
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-bg-main);
+      color: var(--color-text-gray);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--color-text-light);
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: rgba(6, 8, 15, 0.95);
+      border-bottom: 1px solid var(--color-gold-muted);
+      backdrop-filter: blur(10px);
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-badge {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #06080F;
+      background-color: var(--color-gold);
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-text-light);
+      letter-spacing: 0.05em;
+    }
+
+    .logo-text span {
+      color: var(--color-gold);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-gray);
+    }
+
+    .nav-link:hover {
+      color: var(--color-gold);
+    }
+
+    /* Legal Header */
+    .legal-header {
+      padding: 5rem 0 3rem 0;
+      text-align: center;
+      border-bottom: 1px solid var(--color-gold-muted);
+      background: radial-gradient(circle at 50% 50%, rgba(201, 169, 110, 0.03), transparent 70%);
+    }
+
+    .legal-meta {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-gold);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .legal-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .legal-header p {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Legal Content */
+    .legal-content-section {
+      padding: 4rem 0;
+    }
+
+    .legal-back-btn {
+      display: inline-flex;
+      align-items: center;
+      color: var(--color-gold);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      transition: var(--transition-smooth);
+    }
+
+    .legal-back-btn:hover {
+      color: var(--color-text-light);
+      transform: translateX(-4px);
+    }
+
+    .legal-card {
+      background-color: var(--color-bg-card);
+      border: 1px solid var(--color-gold-muted);
+      border-radius: 8px;
+      padding: 3.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .legal-text h2 {
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 0.5rem;
+    }
+
+    .legal-text h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .legal-text p {
+      margin-bottom: 1.5rem;
+      color: var(--color-text-gray);
+    }
+
+    .legal-text ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      list-style-type: square;
+    }
+
+    .legal-text li {
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-contact-box {
+      background-color: rgba(6, 8, 15, 0.5);
+      border-left: 3px solid var(--color-gold);
+      border-radius: 4px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .legal-contact-box h3 {
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-text-light);
+    }
+
+    .legal-contact-box p {
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-contact-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: #030407;
+      border-top: 1px solid var(--color-gold-muted);
+      padding: 4rem 0 3rem 0;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-address {
+      line-height: 1.7;
+      color: var(--color-text-gray);
+    }
+
+    .footer-address strong {
+      color: var(--color-text-light);
+    }
+
+    .footer-links-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-links-title {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-gold);
+    }
+
+    .footer-links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-link-item:hover {
+      color: var(--color-gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .legal-header h1 {
+        font-size: 2rem;
+      }
+      .legal-card {
+        padding: 2rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-<body class="legal-body">
+<body>
 
   <!-- Header Section -->
-  <header class="site-header scrolled" id="header">
+  <header class="site-header" id="header">
     <div class="container header-container">
-      <a href="index.html" class="logo" id="headerLogo">
-        <div class="logo-icon">MA</div>
-        <div class="logo-text">
-          MA Instituto
-          <span>Profissional</span>
-        </div>
+      <a href="index.html" class="logo">
+        <div class="logo-badge">MA</div>
+        <div class="logo-text">MA <span>Instituto</span></div>
       </a>
       
       <nav class="nav-menu" id="navMenu">
         <a href="index.html#inicio" class="nav-link">Início</a>
-        <a href="index.html#portfolio" class="nav-link">Cursos & Livros</a>
-        <a href="index.html#sobre" class="nav-link">Diferenciais</a>
-        <a href="index.html#contato" class="nav-link">Fale Conosco</a>
-        <a href="https://api.whatsapp.com/send?phone=5511913124813" target="_blank" class="nav-btn" id="headerCtaBtn">
-          Falar no WhatsApp
-        </a>
+        <a href="index.html#cursos" class="nav-link">Cursos</a>
+        <a href="index.html#sobre" class="nav-link">Sobre</a>
+        <a href="index.html#contato" class="nav-link">Contato</a>
       </nav>
     </div>
   </header>
@@ -43,7 +340,7 @@
     <div class="container">
       <span class="legal-meta">Compliance e LGPD</span>
       <h1>Política de Privacidade</h1>
-      <p>Última atualização: 22 de junho de 2026</p>
+      <p>Última atualização: 24 de junho de 2026</p>
     </div>
   </section>
 
@@ -62,14 +359,14 @@
           <p>Nós operamos sob o princípio da minimização de dados, solicitando apenas o estritamente necessário para prestar o atendimento solicitado. Coletamos as seguintes informações:</p>
           <ul>
             <li><strong>Nome Completo:</strong> Coletado através do formulário de contato para que possamos identificá-lo e tratá-lo adequadamente em nossa comunicação.</li>
-            <li><strong>Mensagem de Contato:</strong> A descrição ou dúvida enviada pelo usuário relacionada aos cursos presenciais ou à compra de livros didáticos.</li>
+            <li><strong>Mensagem de Contato:</strong> A descrição ou dúvida enviada pelo usuário relacionada aos cursos presenciais e mentorias.</li>
             <li><strong>Cookies e Dados de Navegação:</strong> Armazenamos cookies técnicos temporários para fins de segurança, funcionamento básico do site e consentimento de termos. Não fazemos rastreamento invasivo ou cruzamento de dados para perfis comportamentais sem consentimento.</li>
           </ul>
 
           <h2>3. Finalidades do Tratamento de Dados</h2>
           <p>As informações coletadas em nossa plataforma são tratadas exclusivamente para as seguintes finalidades legítimas:</p>
           <ul>
-            <li>Responder a solicitações de suporte, informações sobre turmas de cursos presenciais e dúvidas sobre compra e entrega de livros;</li>
+            <li>Responder a solicitações de suporte, informações sobre turmas de cursos presenciais e mentorias;</li>
             <li>Direcionar o atendimento de forma otimizada para o canal oficial de WhatsApp do MA Instituto;</li>
             <li>Cumprir obrigações legais de segurança da informação e auditorias técnicas exigidas pelas plataformas parceiras (Meta / WhatsApp Business API).</li>
           </ul>
@@ -105,11 +402,11 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-company">
-          <div class="footer-logo">
-            <div class="logo-icon">MA</div>
-            <div class="logo-text">MA Instituto <span>Profissional</span></div>
-          </div>
+        <div class="footer-brand">
+          <a href="index.html#inicio" class="logo">
+            <div class="logo-badge">MA</div>
+            <div class="logo-text">MA <span>Instituto</span></div>
+          </a>
           <p class="footer-address">
             <strong>MA INSTITUTO PROFISSIONAL LTDA</strong><br>
             CNPJ: 50.449.550/0001-60<br>
@@ -118,15 +415,15 @@
           </p>
         </div>
         
-        <div class="footer-links-group">
+        <div class="footer-links-column">
           <h4 class="footer-links-title">Links Importantes</h4>
-          <ul class="footer-links">
-            <li><a href="index.html#inicio">Início</a></li>
-            <li><a href="index.html#portfolio">Cursos & Livros</a></li>
-            <li><a href="privacidade.html">Política de Privacidade</a></li>
-            <li><a href="termos.html">Termos de Uso</a></li>
-            <li><a href="#exclusao">Solicitar Exclusão de Dados</a></li>
-            <li><a href="termos.html#vulnerabilidade">Relatar Vulnerabilidade</a></li>
+          <ul class="footer-links-list">
+            <li><a href="index.html#inicio" class="footer-link-item">Início</a></li>
+            <li><a href="index.html#cursos" class="footer-link-item">Cursos</a></li>
+            <li><a href="privacidade.html" class="footer-link-item">Política de Privacidade</a></li>
+            <li><a href="termos.html" class="footer-link-item">Termos de Uso</a></li>
+            <li><a href="#exclusao" class="footer-link-item">Solicitar Exclusão de Dados</a></li>
+            <li><a href="termos.html#vulnerabilidade" class="footer-link-item">Relatar Vulnerabilidade</a></li>
           </ul>
         </div>
       </div>

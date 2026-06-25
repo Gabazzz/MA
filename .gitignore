@@ -1,5 +1,7 @@
 node_modules/
 dom-screenshots/
+qa-screenshots/
 inspect-cookies.js
+qa-inspector.js
 package.json
 package-lock.json
