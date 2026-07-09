@@ -661,6 +661,14 @@
       gap: 0.75rem;
     }
 
+    .premium-card .card-desc {
+      font-size: 0.95rem;
+      color: var(--color-text-gray);
+      margin-bottom: 2rem;
+      flex-grow: 1;
+      line-height: 1.65;
+    }
+
     .bullet-item {
       display: flex;
       align-items: flex-start;
@@ -800,6 +808,19 @@
       border: 1px solid var(--color-gold-muted);
       position: relative;
       overflow: hidden;
+    }
+
+    .avatar-fallback img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.95) contrast(1.05);
+      transition: transform 0.5s ease;
+    }
+
+    .avatar-fallback img:hover {
+      transform: scale(1.03);
     }
 
     .avatar-fallback svg {
@@ -1300,25 +1321,8 @@
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             Verona, Itália
           </span>
-          <h3 class="card-title">Verona Premium Experience</h3>
-          <div class="card-bullets">
-            <div class="bullet-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span>Imersão intensiva de 4 dias no berço histórico de Verona.</span>
-            </div>
-            <div class="bullet-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span>Prática científica avançada em *Fresh Frozen Specimens*.</span>
-            </div>
-            <div class="bullet-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span>Dupla certificação internacional altamente valorizada no mercado.</span>
-            </div>
-            <div class="bullet-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span>Aulas exclusivas com ambientação premium dentro de vinícola italiana.</span>
-            </div>
-          </div>
+          <h3 class="card-title">Premium Experience Itally (Verona)</h3>
+          <p class="card-desc">Para profissionais e estudantes que desejam ampliar seu conhecimento técnico, evoluir o conhecimento anatômico e praticar sem medo de erro em cadáveres ultra frescos com ativos reais e dupla certificação.</p>
           <div class="card-footer">
             <div class="card-date">
               <span>PRÓXIMA TURMA</span>
@@ -1334,25 +1338,8 @@
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             Texas, EUA
           </span>
-          <h3 class="card-title">Texas Premium Experience</h3>
-          <div class="card-bullets">
-            <div class="bullet-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span>Edição inaugural: O primeiro grupo de profissionais brasileiros no Texas.</span>
-            </div>
-            <div class="bullet-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span>Estudo anatômico cirúrgico aprofundado em *Wet Lab Fresh Frozen*.</span>
-            </div>
-            <div class="bullet-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span>Metodologias focadas em captação de clientes e vendas *high ticket*.</span>
-            </div>
-            <div class="bullet-item">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span>Network exclusivo imerso em gastronomia e cultura local texana.</span>
-            </div>
-          </div>
+          <h3 class="card-title">Premium Experience Texas</h3>
+          <p class="card-desc">Para profissionais e estudantes que desejam ampliar seu conhecimento técnico, evoluir o conhecimento anatômico e praticar sem medo de erro em cadáveres ultra frescos com ativos reais e dupla certificação</p>
           <div class="card-footer">
             <div class="card-date">
               <span>PRÓXIMA TURMA</span>
@@ -1376,7 +1363,7 @@
         <!-- Curso 1 -->
         <div class="nacional-card reveal">
           <h3 class="card-title">Full Face Advanced</h3>
-          <p class="card-desc">Curso presencial prático com ênfase no método conceitual *Brazilian Face*. Aborda as principais e mais seguras técnicas globais de estruturação e refinamento facial completo.</p>
+          <p class="card-desc">Para os profissionais que desejam evoluir tecnicamente com o Método Brazilian Face. Mentoria VIP com prática em paciente modelo real, pacientes individuais por aluno, ocorre em Brasília.</p>
           <div class="card-footer">
             <a href="https://api.whatsapp.com/send?phone=5511913124813&text=Olá! Gostaria de consultar turmas e valores para o curso presencial Full Face Advanced." target="_blank" class="btn btn-outline" style="width: 100%;" id="fullFaceAdvancedBtn">Consultar Turmas</a>
           </div>
@@ -1384,17 +1371,17 @@
 
         <!-- Curso 2 -->
         <div class="nacional-card reveal">
-          <h3 class="card-title">Full Face VIP Medical</h3>
-          <p class="card-desc">Treinamento avançado de alta performance desenhado exclusivamente para médicos. Protocolos clínicos refinados para aplicação segura de injetáveis nas regiões de maior complexidade.</p>
+          <h3 class="card-title">Full Face Advanced VIP Medical</h3>
+          <p class="card-desc">Exclusivo para profissionais médicos, a mentoria é realizada de forma individual com o Dr. Maurício acompanhando exclusivamente o profissional nos atendimentos Full Face de pacientes modelos reais.</p>
           <div class="card-footer">
-            <a href="https://api.whatsapp.com/send?phone=5511913124813&text=Olá! Gostaria de consultar turmas para o curso Full Face VIP Medical." target="_blank" class="btn btn-outline" style="width: 100%;" id="vipMedicalBtn">Consultar Turmas</a>
+            <a href="https://api.whatsapp.com/send?phone=5511913124813&text=Olá! Gostaria de consultar turmas para o curso Full Face Advanced VIP Medical." target="_blank" class="btn btn-outline" style="width: 100%;" id="vipMedicalBtn">Consultar Turmas</a>
           </div>
         </div>
 
         <!-- Curso 3 -->
         <div class="nacional-card reveal">
           <h3 class="card-title">Mentoria Elite HOF</h3>
-          <p class="card-desc">Acompanhamento completo de 12 meses totalmente online. Foco absoluto no desenvolvimento técnico de alta performance, estruturação de canais comerciais e mentoria de gestão.</p>
+          <p class="card-desc">Para quem quer melhorar além da técnica, mas também se desenvolver como empresário da HOF.</p>
           <div class="card-footer">
             <a href="https://api.whatsapp.com/send?phone=5511913124813&text=Olá! Quero conhecer mais sobre os benefícios da Mentoria Elite HOF de 12 meses." target="_blank" class="btn btn-outline" style="width: 100%;" id="eliteMentoringBtn">Conhecer a Mentoria</a>
           </div>
@@ -1403,7 +1390,7 @@
         <!-- Curso 4 -->
         <div class="nacional-card reveal">
           <h3 class="card-title">Brazilian Face Starter Access</h3>
-          <p class="card-desc">Curso online de introdução com acesso imediato. 4 módulos didáticos focados em planejamento clínico e análise de casos reais. Inclui bônus exclusivo de R$2.000 de cashback para cursos presenciais.</p>
+          <p class="card-desc">Curso on-line para os profissionais que desejam inovar seu aprendizado em Harmonização Facial através do Método Brazilian Face. Mais de 70 alunas disponíveis abordando desde a consulta, passando pelo planejamento Full Face e a demonstração de cada técnica para cada área do rosto e uma aula exclusiva sobre intercorrência, gravada para te orientar nessas situações.</p>
           <div class="card-footer">
             <a href="https://api.whatsapp.com/send?phone=5511913124813&text=Olá! Quero obter o acesso imediato ao Brazilian Face Starter Access." target="_blank" class="btn btn-gold" style="width: 100%;" id="starterAccessBtn">Acessar Agora</a>
           </div>
@@ -1422,9 +1409,7 @@
         <div class="mentor-visual reveal">
           <div class="mentor-frame">
             <div class="avatar-fallback">
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
-              <div class="avatar-text-dr">Dr. Maurício Alves</div>
-              <div class="avatar-text-sub">Fundador & Mentor</div>
+              <img src="mentor.png" alt="Dr. Maurício Alves - Fundador & Mentor">
             </div>
             <div class="mentor-info-list">
               <div class="mentor-info-card">
